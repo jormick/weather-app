@@ -1,5 +1,5 @@
-import Card from "./components/Card";
-import Weather from "./components/Weather";
+import Card from "./components/Card/Card";
+import Weather from "./components/Weather/Weather";
 import "./index.css";
 
 const App = () => {

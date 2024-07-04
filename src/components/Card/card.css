@@ -1,0 +1,76 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin-top: 1rem;
+  background: linear-gradient(45deg, blue, purple);
+  color: white;
+  width: 22%;
+  box-shadow: 0px 0px 3px 0px;
+  border-radius: 15px;
+  min-width: 350px;
+  align-items: center;
+  max-width: 380px;
+}
+
+.weather-icon {
+  margin-top: 20px;
+  width: 58px;
+  cursor: pointer;
+}
+
+.weather-icon:hover {
+  animation-name: rotate-icon;
+  animation-duration: 500ms;
+  cursor: pointer;
+}
+
+.card-info {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+.temperature {
+  font-size: xx-large;
+  margin-top: 20px;
+}
+
+.location {
+  margin-top: 20px;
+  font-size: xx-large;
+}
+
+.weather-data {
+  display: flex;
+  width: 100%;
+  margin-top: 20px;
+  gap: 4rem;
+  justify-content: space-between;
+}
+
+.weather-data .col {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 24px;
+}
+
+.weather-data .col span {
+  font-size: 14px;
+}
+
+.weather-data .col img {
+  width: 38px;
+}
+
+@keyframes rotate-icon {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}

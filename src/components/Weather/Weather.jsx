@@ -1,5 +1,5 @@
-import "./Weather.css";
-import search_icon from "../assets/search_icon.png";
+import "./weather.css";
+import search_icon from "../../assets/search_icon.png";
 
 const Weather = () => {
   return (

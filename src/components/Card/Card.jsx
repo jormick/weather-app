@@ -6,14 +6,33 @@ import humidity_icon from "../../assets/humidity_icon.png";
 //import rain_icon from "../assets/rain_icon.png";
 //import snow_icon from "../assets/snow_icon.png";
 import wind_icon from "../../assets/wind_icon.png";
+import { useEffect } from "react";
 
 const Card = () => {
+  const search = async (city) => {
+    try {
+      const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${
+        import.meta.env.VITE_APP_ID
+      }`;
+
+      const response = await fetch(url);
+      const data = await response.json();
+      console.log(data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    search("Moscow");
+  }, []);
+
   return (
     <div className="card">
       <img src={clean_icon} alt="" className="weather-icon" />
       <div className="card-info">
         <p className="temperature">24°c</p>
-        <p className="location">Moskow</p>
+        <p className="location">Moscow</p>
         <div className="weather-data">
           <div className="col">
             <img src={humidity_icon} alt="Humidity" />

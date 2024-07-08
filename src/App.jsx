@@ -1,12 +1,17 @@
 import Card from "./components/Card/Card";
-import Weather from "./components/Weather/Weather";
+import Search from "./components/Search/Search";
+import Dates from "./components/Dates/Dates";
+
 import "./index.css";
+import FutureData from "./components/FutureData/FutureData";
 
 const App = () => {
   return (
     <div className="app">
-      <Weather />
+      <Search />
+      <Dates />
       <Card />
+      <FutureData />
     </div>
   );
 };

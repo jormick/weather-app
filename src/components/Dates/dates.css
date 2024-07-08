@@ -1,0 +1,50 @@
+.dates-bar {
+  margin-top: 1rem;
+  width: 360px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.date-picker {
+  display: flex;
+  overflow: auto;
+  justify-content: space-between;
+  width: 360px;
+}
+
+.date {
+  display: flex;
+  font-size: 24px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 65px;
+  height: 60px;
+  padding: 5px;
+  border-radius: 10px;
+  color: white;
+  background: linear-gradient(45deg, rgb(0, 0, 182), rgb(157, 196, 255));
+  cursor: pointer;
+  box-shadow: 0px 0px 3px rgb(116, 116, 116);
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.date:hover {
+  animation-name: date-hover;
+  animation-duration: 250ms;
+  width: 70px;
+  height: 65px;
+}
+
+@keyframes date-hover {
+  from {
+    width: 65px;
+    height: 60px;
+  }
+  to {
+    width: 70px;
+    height: 65px;
+  }
+}

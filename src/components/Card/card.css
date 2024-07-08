@@ -3,26 +3,22 @@
   flex-direction: column;
   padding: 10px;
   margin-top: 1rem;
-  background: linear-gradient(45deg, blue, purple);
+  background: linear-gradient(45deg, rgb(0, 0, 182), rgb(157, 196, 255));
   color: white;
-  width: 22%;
-  box-shadow: 0px 0px 3px 0px;
   border-radius: 15px;
-  min-width: 350px;
   align-items: center;
-  max-width: 380px;
+  width: 360px;
+  box-shadow: 0px 0px 10px rgb(116, 116, 116);
 }
 
 .weather-icon {
   margin-top: 20px;
   width: 58px;
-  cursor: pointer;
 }
 
 .weather-icon:hover {
   animation-name: rotate-icon;
-  animation-duration: 500ms;
-  cursor: pointer;
+  animation-duration: 1s;
 }
 
 .card-info {

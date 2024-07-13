@@ -1,7 +1,7 @@
 import "./dates.css";
 import React from "react";
 
-const Dates = () => {
+const Dates = (props) => {
   const date = new Date();
   const months = [
     "Jan",
@@ -39,26 +39,20 @@ const Dates = () => {
   return (
     <div className="dates-bar">
       <div className="date-picker">
-        <div className="date">
-          <p className="day-text">{days[0]}</p>
-          <p className="month-text">{currentMonth}</p>
-        </div>
-        <div className="date">
-          <p className="day-text">{days[1]}</p>
-          <p className="month-text">{currentMonth}</p>
-        </div>
-        <div className="date">
-          <p className="day-text">{days[2]}</p>
-          <p className="month-text">{currentMonth}</p>
-        </div>
-        <div className="date">
-          <p className="day-text">{days[3]}</p>
-          <p className="month-text">{currentMonth}</p>
-        </div>
-        <div className="date">
-          <p className="day-text">{days[4]}</p>
-          <p className="month-text">{currentMonth}</p>
-        </div>
+        {days.map((item, index) => {
+          return (
+            <div
+              onClick={() => {
+                props.onChange(index);
+              }}
+              key={item}
+              className="date"
+            >
+              <p className="day-text">{item}</p>
+              <p className="month-text">{currentMonth}</p>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
